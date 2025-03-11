@@ -12,6 +12,10 @@ class GameMapActivity : AppCompatActivity() {
 
         val btnStartRound = findViewById<Button>(R.id.btn_start_round)
         val btnPause = findViewById<Button>(R.id.btn_pause)
-        
+
+        btnStartRound.setOnClickListener {
+            val intent = Intent(this, WinScreenActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
