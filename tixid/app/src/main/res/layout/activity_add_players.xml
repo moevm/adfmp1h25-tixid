@@ -14,7 +14,13 @@
         android:text="Список"
         android:textColor="@android:color/white"
         android:textSize="20sp" />
-    
+
+    <ListView
+        android:id="@+id/players_list"
+        android:layout_width="wrap_content"
+        android:layout_height="378dp"
+        android:dividerHeight="1dp" />
+
 
 
     <Button
