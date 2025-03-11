@@ -13,11 +13,15 @@ class AddPlayersActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_players)
-
+        
         adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, playersList)
-
-
+        
+        btnStartGame.setOnClickListener {
+            val intent = Intent(this, ChooseCardActivity::class.java)
+            startActivity(intent)
+        }
+        
     }
-
+    
 
 }
