@@ -27,7 +27,7 @@
         android:id="@+id/btn_start_game"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Старт"
+        android:text="Запустить игру"
         android:layout_marginTop="10dp"/>
 
 
