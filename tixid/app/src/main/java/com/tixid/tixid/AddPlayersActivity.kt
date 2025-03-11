@@ -14,6 +14,8 @@ class AddPlayersActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_players)
         
+        val btnStartGame = findViewById<Button>(R.id.btn_start_game)
+
         adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, playersList)
         
         btnStartGame.setOnClickListener {
