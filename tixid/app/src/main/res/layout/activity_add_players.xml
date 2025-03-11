@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Список игроков"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <ListView
+        android:id="@+id/players_list"
+        android:layout_width="wrap_content"
+        android:layout_height="378dp"
+        android:divider="@android:color/black"
+        android:dividerHeight="1dp" />
+
+    <Button
+        android:id="@+id/btn_add_player"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Добавить игрока"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/btn_start_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Запустить игру"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/btn_main_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Главное меню"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>
