@@ -13,6 +13,10 @@ class GameMapView(context: Context, attrs: AttributeSet?) : View(context, attrs)
         style = Paint.Style.STROKE
     }
 
+    private val players = listOf("Рома", "Артур", "Андрей", "Марк") 
+    private val positions = mutableListOf<Pair<Float, Float>>()
+
+
 
     }
 }
