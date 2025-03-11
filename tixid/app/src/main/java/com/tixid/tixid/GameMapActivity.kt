@@ -9,5 +9,9 @@ class GameMapActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game_map)
+
+        val btnStartRound = findViewById<Button>(R.id.btn_start_round)
+        val btnPause = findViewById<Button>(R.id.btn_pause)
+        
     }
 }
