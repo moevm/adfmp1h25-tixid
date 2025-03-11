@@ -32,7 +32,21 @@ class GameMapView(context: Context, attrs: AttributeSet?) : View(context, attrs)
             }
         }
 
+        for (i in positions.indices) {
+            val (x1, y1) = positions[i]
+            val (x2, y2) = positions[(i + 1) % positions.size]
+            canvas.drawLine(x1, y1, x2, y2, paint)
+        }
 
+        for ((index, pos) in positions.withIndex()) {
+            val x = pos.first
+            val y = pos.second
+            canvas.drawCircle(x, y, 50f, paint)
 
+            paint.textSize = 40f
+            paint.style = Paint.Style.FILL
+            canvas.drawText(players[index], x - 30, y + 10, paint)
+            paint.style = Paint.Style.STROKE
+        }
     }
 }
