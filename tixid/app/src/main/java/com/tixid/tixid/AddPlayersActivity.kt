@@ -25,6 +25,18 @@ class AddPlayersActivity : AppCompatActivity() {
         }
         
     }
-    
+
+    private fun showAddPlayerDialog() {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Введите имя игрока")
+
+        val input = EditText(this)
+        builder.setView(input)
+        
+
+        builder.setNegativeButton("Отмена") { dialog, _ -> dialog.dismiss() }
+
+        builder.show()
+    }
 
 }
