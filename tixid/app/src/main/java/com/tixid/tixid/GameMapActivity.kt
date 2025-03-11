@@ -17,5 +17,10 @@ class GameMapActivity : AppCompatActivity() {
             val intent = Intent(this, WinScreenActivity::class.java)
             startActivity(intent)
         }
+
+        btnPause.setOnClickListener {
+            val intent = Intent(this, PauseActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
