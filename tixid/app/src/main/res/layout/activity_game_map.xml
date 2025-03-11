@@ -6,7 +6,16 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="16dp">
-    
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Карта раунда"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
+
     <com.tixid.tixid.GameMapView
         android:id="@+id/game_map"
         android:layout_width="match_parent"
