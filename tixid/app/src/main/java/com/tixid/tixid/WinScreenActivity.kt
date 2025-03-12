@@ -14,7 +14,7 @@ class WinScreenActivity : AppCompatActivity() {
         val tvWinner = findViewById<TextView>(R.id.tv_winner)
         val btnMainMenu = findViewById<Button>(R.id.btn_main_menu)
 
-        val winnerName = intent.getStringExtra("WINNER_NAME") ?: "Игрок"
+        val winnerName = intent.getStringExtra("WINNER_NAME") ?: "Рома"
         tvWinner.text = "Поздравляем! Победил $winnerName!"
 
         btnMainMenu.setOnClickListener {

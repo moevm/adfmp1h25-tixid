@@ -28,8 +28,10 @@ class AddPlayersActivity : AppCompatActivity() {
 
         btnStartGame.setOnClickListener {
             val intent = Intent(this, ChooseCardActivity::class.java)
+            intent.putExtra("PLAYER_INDEX", 0)
             startActivity(intent)
         }
+
 
         btnMainMenu.setOnClickListener {
             finish()
@@ -41,6 +43,9 @@ class AddPlayersActivity : AppCompatActivity() {
         builder.setTitle("Введите имя игрока")
 
         val input = EditText(this)
+        input.inputType = android.text.InputType.TYPE_CLASS_TEXT
+        input.imeOptions = android.view.inputmethod.EditorInfo.IME_ACTION_DONE
+
         builder.setView(input)
 
         builder.setPositiveButton("Добавить") { _, _ ->
@@ -49,8 +54,19 @@ class AddPlayersActivity : AppCompatActivity() {
 
         builder.setNegativeButton("Отмена") { dialog, _ -> dialog.dismiss() }
 
-        builder.show()
+        val dialog = builder.create()
+        dialog.show()
+
+        input.setOnEditorActionListener { _, actionId, _ ->
+            if (actionId == android.view.inputmethod.EditorInfo.IME_ACTION_DONE) {
+                dialog.getButton(AlertDialog.BUTTON_POSITIVE).performClick()
+                true
+            } else {
+                false
+            }
+        }
     }
+
 
     private fun showErrorDialog(message: String) {
         val builder = AlertDialog.Builder(this)

@@ -2,10 +2,9 @@ package com.tixid.tixid
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.GridView
-import android.widget.ImageView
-import android.widget.Toast
+import android.view.View
+import android.view.ViewGroup
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
 class VotingActivity : AppCompatActivity() {
@@ -21,9 +20,13 @@ class VotingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_voting)
 
+        val tvLeaderName = findViewById<TextView>(R.id.tv_leader_name)
         val gridView = findViewById<GridView>(R.id.card_grid)
         val btnNext = findViewById<Button>(R.id.btn_next)
         val btnPause = findViewById<Button>(R.id.btn_pause)
+
+        val leaderName = "Рома"
+        tvLeaderName.text = "Выберите карточку ведущего: $leaderName"
 
         adapter = CardAdapter()
         gridView.adapter = adapter
@@ -42,21 +45,20 @@ class VotingActivity : AppCompatActivity() {
             }
         }
 
-
         btnPause.setOnClickListener {
             val intent = Intent(this, PauseActivity::class.java)
             startActivity(intent)
         }
     }
 
-    private inner class CardAdapter : android.widget.BaseAdapter() {
+    private inner class CardAdapter : BaseAdapter() {
         override fun getCount(): Int = cardImages.size
         override fun getItem(position: Int): Any = cardImages[position]
         override fun getItemId(position: Int): Long = position.toLong()
 
-        override fun getView(position: Int, convertView: android.view.View?, parent: android.view.ViewGroup?): android.view.View {
+        override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
             val imageView = ImageView(this@VotingActivity)
-            imageView.layoutParams = android.widget.AbsListView.LayoutParams(250, 350)
+            imageView.layoutParams = AbsListView.LayoutParams(250, 350)
             imageView.setImageResource(cardImages[position])
 
             if (selectedCard == cardImages[position]) {
