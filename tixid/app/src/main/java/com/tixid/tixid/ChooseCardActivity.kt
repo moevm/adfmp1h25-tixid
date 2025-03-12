@@ -37,6 +37,22 @@ class ChooseCardActivity : AppCompatActivity() {
                 Toast.makeText(this, "Выберите карточку!", Toast.LENGTH_SHORT).show()
             }
         }
+        btnNext.setOnClickListener {
+            if (selectedCard == null) {
+                Toast.makeText(this, "Выберите карточку!", Toast.LENGTH_SHORT).show()
+            } else {
+                val intent = Intent(this, PassPhoneActivity::class.java)
+                intent.putExtra("PLAYER_NAME", "Следующий игрок") // Можно передавать имя
+                startActivity(intent)
+            }
+        }
+        val btnPause = findViewById<Button>(R.id.btn_pause)
+        btnPause.setOnClickListener {
+            val intent = Intent(this, PauseActivity::class.java)
+            startActivity(intent)
+        }
+
+
     }
 
     private inner class CardAdapter : android.widget.BaseAdapter() {
