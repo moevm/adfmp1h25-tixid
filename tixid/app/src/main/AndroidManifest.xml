@@ -31,6 +31,7 @@
         <activity android:name=".GameMapActivity" />
         <activity android:name=".WinScreenActivity" />
         <activity android:name=".StatisticsActivity" />
+        <activity android:name=".GameMapView" />
     </application>
 
 </manifest>
