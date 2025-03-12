@@ -29,6 +29,7 @@
         <activity android:name=".PauseActivity" />
         <activity android:name=".VotingActivity" />
         <activity android:name=".GameMapActivity" />
+        <activity android:name=".WinScreenActivity" />
     </application>
 
 </manifest>
