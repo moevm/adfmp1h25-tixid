@@ -25,6 +25,7 @@
         <activity android:name=".CreatorsActivity" />
         <activity android:name=".AddPlayersActivity" />
         <activity android:name=".ChooseCardActivity" />
+        <activity android:name=".PassPhoneActivity" />
     </application>
 
 </manifest>
