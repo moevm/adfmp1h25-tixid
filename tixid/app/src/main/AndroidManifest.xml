@@ -26,6 +26,7 @@
         <activity android:name=".AddPlayersActivity" />
         <activity android:name=".ChooseCardActivity" />
         <activity android:name=".PassPhoneActivity" />
+        <activity android:name=".PauseActivity" />
     </application>
 
 </manifest>
