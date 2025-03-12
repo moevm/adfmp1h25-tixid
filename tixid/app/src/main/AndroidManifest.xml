@@ -30,6 +30,7 @@
         <activity android:name=".VotingActivity" />
         <activity android:name=".GameMapActivity" />
         <activity android:name=".WinScreenActivity" />
+        <activity android:name=".StatisticsActivity" />
     </application>
 
 </manifest>
