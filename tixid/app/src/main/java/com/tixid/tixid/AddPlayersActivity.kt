@@ -29,7 +29,10 @@ class AddPlayersActivity : AppCompatActivity() {
             val intent = Intent(this, ChooseCardActivity::class.java)
             startActivity(intent)
         }
-        
+
+        btnMainMenu.setOnClickListener {
+            finish()
+        }
     }
 
     private fun showAddPlayerDialog() {

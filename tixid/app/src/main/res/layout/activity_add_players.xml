@@ -35,5 +35,10 @@
         android:text="Запустить игру"
         android:layout_marginTop="10dp"/>
 
-
+    <Button
+        android:id="@+id/btn_main_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Главное меню"
+        android:layout_marginTop="10dp"/>
 </LinearLayout>
