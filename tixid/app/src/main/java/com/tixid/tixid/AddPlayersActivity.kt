@@ -13,7 +13,8 @@ class AddPlayersActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_players)
-        
+
+        val listView = findViewById<ListView>(R.id.players_list)
         val btnStartGame = findViewById<Button>(R.id.btn_start_game)
 
         adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, playersList)
