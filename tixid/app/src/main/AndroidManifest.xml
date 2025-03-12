@@ -28,6 +28,7 @@
         <activity android:name=".PassPhoneActivity" />
         <activity android:name=".PauseActivity" />
         <activity android:name=".VotingActivity" />
+        <activity android:name=".GameMapActivity" />
     </application>
 
 </manifest>
