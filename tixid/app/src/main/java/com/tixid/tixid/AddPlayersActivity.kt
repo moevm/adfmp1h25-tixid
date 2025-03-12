@@ -17,6 +17,7 @@ class AddPlayersActivity : AppCompatActivity() {
         val listView = findViewById<ListView>(R.id.players_list)
         val btnAddPlayer = findViewById<Button>(R.id.btn_add_player)
         val btnStartGame = findViewById<Button>(R.id.btn_start_game)
+        val btnMainMenu = findViewById<Button>(R.id.btn_main_menu)
 
         adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, playersList)
         listView.adapter = adapter
@@ -41,11 +42,21 @@ class AddPlayersActivity : AppCompatActivity() {
 
         val input = EditText(this)
         builder.setView(input)
-        
+
+        builder.setPositiveButton("Добавить") { _, _ ->
+            showErrorDialog("Нельзя добавить нового игрока!")
+        }
 
         builder.setNegativeButton("Отмена") { dialog, _ -> dialog.dismiss() }
 
         builder.show()
     }
 
+    private fun showErrorDialog(message: String) {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Ошибка")
+        builder.setMessage(message)
+        builder.setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
+        builder.show()
+    }
 }
