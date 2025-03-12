@@ -15,11 +15,16 @@ class AddPlayersActivity : AppCompatActivity() {
         setContentView(R.layout.activity_add_players)
 
         val listView = findViewById<ListView>(R.id.players_list)
+        val btnAddPlayer = findViewById<Button>(R.id.btn_add_player)
         val btnStartGame = findViewById<Button>(R.id.btn_start_game)
 
         adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, playersList)
         listView.adapter = adapter
-        
+
+        btnAddPlayer.setOnClickListener {
+            showAddPlayerDialog()
+        }
+
         btnStartGame.setOnClickListener {
             val intent = Intent(this, ChooseCardActivity::class.java)
             startActivity(intent)
